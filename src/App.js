@@ -21,7 +21,6 @@ export default () => {
       let randomChosen = Math.floor(Math.random() * (originals[0].items?.results.length - 1));
       let chosen = originals[0].items.results[randomChosen];
       let ChosenInfo = await tmdb.getMovieInfo(chosen.id, 'tv');
-      console.log(ChosenInfo)
       setFeaturedData(ChosenInfo);
     }
     loadAll();
@@ -41,6 +40,9 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      {movieList >= 0 ? <> <div className="loading">
+        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading" />
+      </div> </> : null}
     </div>
   );
 }

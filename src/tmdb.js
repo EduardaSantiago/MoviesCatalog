@@ -26,14 +26,14 @@ export default  {
         return [
           {
               slug: 'Originals',
-              title: 'Originais do ',
+              title: 'Originais do Netflix',
               items: await basicFecth(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
           },
-          {
+          /* {
               slug: 'Trending',
               title: ' Recomendados para Você',
               items: await basicFecth(`/treindg/all/week&language=pt-BR&api-key=${API_KEY}`)
-          },
+          }, */
           {
             slug: 'Troprataded',
             title: 'Em Alta',
