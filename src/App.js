@@ -3,11 +3,10 @@ import MovieRow from "./Componente/MovieRow";
 import tmdb from './tmdb';
 import './App.css';
 import FeaturedMovie from "./Componente/FeaturedMovie";
-import PropTypes from 'prop-types';
 import Header from "./Componente/Header";
 
 
-export default () => {
+const App = () => {
   const [movieList, setMovieList] = useState([]);
   const [FeaturedData, setFeaturedData] = useState([]);
 
@@ -46,3 +45,5 @@ export default () => {
     </div>
   );
 }
+
+export default App;
